@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timed Coding Quiz</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+        <h1 id="view-scores">View high scores</h1>
+        <h1>Time: <span id="time">0</span></h1>
+        </nav>
+    </header>
+
+    <section id="start-up-page">
+        <h1>Coding Quiz Challenge</h1>
+        <p>Try to answer the following code-related questions within the time limit.
+            Keep in mind that incorrect answers will penalize your score/time by ten second!
+        </p>
+        <button id="start-quiz-btn">Start Quiz</button>
+    </section>
+
+    <section id="score-page">
+        <h1>High Scores:</h1>
+        <ul id="score-list">
+
+        </ul>
+        <section id="bottom-tabs">
+            <h2 id="go-back">Go Back</h2>
+            <h2 id="clear-scores">Clear Scores</h2>
+        </section>
+    </section>
+    
+    <section id="question-page">
+        <h1 id="question"></h1>
+        <h2 id="final-score">Your final score is <span id="score">0</span></h2>
+        <form action="" method="get" id="initial-form">
+            <section id="labAndInp">
+                <label for="initials">Enter Initials: </label>
+                <input type="text" name="initials" id="initials" size="5" maxLength="2" required>
+                <input type="submit" value="Submit" id="submit">
+            </section>
+        </form>
+        <ul id="answers">
+            <li id="one"></li>
+            <li id="two"></li>
+            <li id="three"></li>
+            <li id="four"></li>
+        </ul>
+        <hr id="wrong-right-line"></hr>
+        <h2 id="wrong-right-text"></h2>
+    </section>
+
+    <script src="./assets/script.js"></script>
+</body>
+</html>
