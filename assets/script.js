@@ -249,8 +249,8 @@ function giveAnswers() {
         answersListEl[2].textContent = "paranthesis";
         answersListEl[3].textContent = "square brackets";
     } else if (questionIndex === 2){
-        answersListEl[0].textContent = "numbers and strings";
-        answersListEl[1].textContent = "other arrays";
+        answersListEl[0].textContent = "numbers";
+        answersListEl[1].textContent = "strings";
         answersListEl[2].textContent = "booleans";
         answersListEl[3].textContent = "all of the above";
     } else if (questionIndex === 3){

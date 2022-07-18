@@ -192,3 +192,9 @@ label {
     background-color: lightsalmon;
     cursor: pointer;
 }
+
+@media screen and (max-width: 700px){
+    #answers li {
+        width: 200px; 
+    }
+}
