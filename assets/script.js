@@ -21,7 +21,7 @@ var correct = "Correct!";
 var wrong = "Wrong!";
 var time = 60;
 var myTimer;
-var collectionOfScores;
+var collectionOfScores = [];
 var questions = ["1. Commonly used data types DO NOT include:", "2. The condition in an if/else is enclosed with ___.",
                 "3. Arrays in JavaScript can be used to store ____.", 
                 "4. String values must be enclosed within ____ when being assigned to variables.",
@@ -183,7 +183,11 @@ submitBtnEl.addEventListener("click", function(event){
     };
 
     // adds object to collectionOfScores array
-    collectionOfScores.push(score);
+    if (collectionOfScores != null){
+        collectionOfScores.push(score);
+    } else {
+        collectionOfScores = [score];
+    }
 
     // so that the local storage can hold it; it is converted to a string
     localStorage.setItem("collectionOfScores", JSON.stringify(collectionOfScores));
