@@ -175,9 +175,9 @@ label {
 }
 
 /* go back and clear scores buttons */
+
 #bottom-tabs {
     display: flex;
-
 }
 #bottom-tabs h2 {
     text-align: center;
@@ -186,15 +186,38 @@ label {
     background-color: magenta;
     border-radius: 10px;
     color: white;
-    width: 25%;
+    width: 20%;
 }
 #bottom-tabs h2:hover {
     background-color: lightsalmon;
     cursor: pointer;
 }
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 1050px){
+    #question-page h1, #wrongOrRight {
+        font-size: 30px;
+    }
+    #final-score{
+        font-size: 25px;
+    }
     #answers li {
+        font-size: 28px;
         width: 200px; 
+    }
+    #bottom-tabs h2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0 5px;
+        width: 110px;
+        height: 60px;
+    }
+    #submit{
+        width: 120px
+    }
+    #initial-form{
+        font-size: 28px;
+        padding: 15px 0;
     }
 }
