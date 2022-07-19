@@ -39,7 +39,8 @@ startQuizEl.addEventListener("click", function(event){
     myTimer = setInterval(function() {
         timeEl.textContent = time;
         scoreEl.textContent = time;
-        if(time == 0){
+        if(time <= 0){
+            time = 0;
             gameover();
             return;
         }
@@ -108,6 +109,9 @@ answersListEl[0].addEventListener("click", function(event) {
         time -= 10;
         // and then if it is the last question; the quiz is considered over
         if (questionIndex === 4) {
+            if (time < 0){
+                time = 0;
+            }
             gameover();
             return;
         }
@@ -145,6 +149,9 @@ answersListEl[2].addEventListener("click", function(event) {
         wrongOrRightEl.textContent = wrong;
         time -= 10;
         if (questionIndex === 4) {
+            if (time < 0){
+                time = 0;
+            }
             gameover();
             return;
         }
@@ -164,6 +171,9 @@ answersListEl[3].addEventListener("click", function(event) {
         wrongOrRightEl.textContent = wrong;
         time -= 10;
         if (questionIndex === 4) {
+            if (time < 0){
+                time = 0;
+            }
             gameover();
             return;
         }
@@ -171,11 +181,10 @@ answersListEl[3].addEventListener("click", function(event) {
     questionIndex++;
     askQuestion();
 })
-
+var input = document.querySelector("input[name=initials]");
 submitBtnEl.addEventListener("click", function(event){
     event.stopPropagation();
     event.preventDefault();
-
     // creates an object with intials and score attributes
     var score = {
         initials: initialsEl.value,
@@ -224,7 +233,7 @@ function showScores() {
         for(var x = 0; x < collectionOfScores.length; x++){
             var li = document.createElement("li");
             li.setAttribute("class", "indiv-score");
-            li.textContent = x+1 + ". " + collectionOfScores[x].initials + " - " + collectionOfScores[x].score;
+            li.textContent = x+1 + ". " + collectionOfScores[x].initials.toUpperCase() + " - " + collectionOfScores[x].score;
             scoreListEl.appendChild(li);
         }
     }
